@@ -20,8 +20,8 @@ function Signup() {
                     email: email,
                     password: password,
                 });
-                if(response.status === 200){
-                    navigate("/Login")
+                if(response.status == 200){
+                    navigate("/login")
                 }
               }
               else{
@@ -39,13 +39,14 @@ function Signup() {
               <h1>Sign Up</h1>
                 <div class="inputbox">
                     <ion-icon name="person-outline"></ion-icon>
-                    <label for="">Name</label>
+                    
                     <input type="text" id= "username" name="username" required 
                     value={username}
                     onChange={(event)=>{
                         setUsername(event.target.value);
                     } }
                     />
+                    <label for="">Name</label>
                     
                 </div>
                 <div class="inputbox">
@@ -81,7 +82,7 @@ function Signup() {
               </div>  
                 <button id= "submit" type="submit" onClick={save}>Sign Up</button>
               <div class="register">
-                <p>Already have an account? <a href="">Log In</a></p>
+                <p>Already have an account? <a href="/login">Log In</a></p>
               </div>
             </form>
           </section>
